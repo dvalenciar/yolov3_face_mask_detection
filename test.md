@@ -1,11 +1,11 @@
 # Deteccion de uso de mascarilla en tiempo real usando YOLO V3 
   ![](https://github.com/dvalenciar/yolov3_face_mask_detection/blob/master/video_out.gif)
 
-Las instrucciones que se presentan a continuacion son para ejecutar un algoritmo de deteccion si una o varias personas estan usando o no mascarilla. 
+Las instrucciones que se presentan a continuación son para ejecutar un algoritmo de detección si una o varias personas están usando o no mascarilla. 
 
-Todo el trabajo duro fue ya realizado (no presento aqui la etapa de entrenamiento del sistema el cual me llevo varias semanas) aqui facilito todo los archivo necesarios y las instrucciones para correr el algoritmo de mandera muy facil, solo sigue las instrucciones y tendras un sistema de tiempo real para detecion de mascarillas
+Todo el trabajo duro fue ya realizado (no presento aquí la etapa de entrenamiento del sistema el cual me llevo varias semanas) aquí facilito todo los archivo necesarios ya entranados y las instrucciones para correr el algoritmo de manera muy fácil, solo sigue las instrucciones y tendrás un sistema de tiempo real para detección de mascarillas.
 
->Solo como informacion general este sistema fue entranado con 2839 imagenes, las cuales fueron escogidas  y evaluadas manualmente. Ademas se utilizo labelImg para etiquetar manualamente una a una las imagenes.
+> Solo como información general este sistema fue entrenado con 2839 imágenes, las cuales fueron escogidas  y evaluadas manualmente. Ademas se utilizo labelImg para etiquetar manualmente una a una las imágenes.
 
 ## Pre-requisitos
 
@@ -23,7 +23,7 @@ sudo apt-get update
 sudo apt-get upgrade
  ```
 ## Paso 1: Clonar y compilar darket 
--Los siguientes comandos clonará darknet  del repositorio de AlexeyAB, ademas se realizarán los cambios necesario en el makefile para activar GPU y OPENCV  
+-Los siguientes comandos clonará darknet del repositorio de AlexeyAB, ademas se realizarán los cambios necesario en el makefile para activar GPU y OPENCV  
 
 ```
 git clone https://github.com/AlexeyAB/darknet.git
@@ -35,47 +35,49 @@ make
 ```
 
 ## Paso 2: Descargar los archivos necesarios
-Asegurate de descargar y copiar esos archivos en los directorios correctos q se indican a continuacion:
+Asegurate de descargar y copiar estos archivos en los directorios correctos que se indican a continuación:
 
 ### Paso 2.1: Descargar los weights pre-entrenados
 
-> Este file .weights contiene los parámetros de la red neuronal convolucional (CNN) de los weights pre-entrenados.
+> Este archivo .weights contiene los parámetros de la red neuronal convolucional (CNN) de los weights pre-entrenados.
 
 - Descarga el archivo **yolov3_face_mask_detection.weights** usando el link:
 ```
 https://drive.google.com/open?id=17jOtOPXNgvYz0vPOpTmhZeQSB843NVIq
 ```
-- Copia este archivo dentro del directorio principal de darketet --> darknet/
+- Copia este archivo dentro del directorio principal de darknet --> darknet/
 
 
 ### Paso 2.2: Descargar el archivo de configuracion 
 
-> Este file .cfg contiene toda la información relacionada con a la arquitectura y parámetros de YOLOv3.
-- Descarga el archivo usando el link:
+> Este archivo .cfg contiene toda la información relacionada con a la arquitectura y parámetros de YOLOv3.
 
-Descagar el archivo **yolov3_face_mask_detection.cfg** usando el link:
+- Descagar el archivo **yolov3_face_mask_detection.cfg** usando el link:
 ```
 https://drive.google.com/open?id=1GNcC5pdh5HRqubKh4AELvJHyuwmf8Q6o
 ```
-Copia este archivo dentro del directorio --> darknet/cfg
+- Copia este archivo dentro del directorio --> darknet/cfg/
+
 
 ### Paso 2.3: Descargar el archivo .names 
->  El file .name contiene toda el nombre de las clases que detecta el sistema.
+>  Este archivo .name contiene el nombre de las clases que detecta el sistema.
 
-Descarga el archivo **yolov3_face_mask_detection.names** usando el link:
+- Descarga el archivo **yolov3_face_mask_detection.names** usando el link:
 ```
 https://drive.google.com/open?id=1hMic2AgVUHc2NjMDaPUYQ1XkBkyz3Fcg
 ```
-Copia este archivo dento del directorio   --> darknet/data
+- Copia este archivo dentro del directorio   --> darknet/data/
 
 ### Paso 2.4: Descargar el archivo .data 
->  El file .data contiene toda el numero clases que detecta el sistema y los direccionamientos necesarios
+>  Ese archivo .data contiene el numero clases que detecta el sistema y los direccionamientos necesarios
 
-Descarga el archivo **yolov3_face_mask_detection.data** usando el link:
+- Descarga el archivo **yolov3_face_mask_detection.data** usando el link:
 ```
 https://drive.google.com/open?id=1uimuJv8zMoYdlhPY80UsRM4sbheNMAGq
 ```
-Copia este archivo dento del directorio   --> darknet/data
+- Copia este archivo dentro del directorio --> darknet/data/
+
+## 
 
 
 - El siguiente diagrama puede ayudar a clarificar donde van estos archivos correctamente:
@@ -97,28 +99,30 @@ Copia este archivo dento del directorio   --> darknet/data
             └───yolov3_face_mask_detection.names
             └───yolov3_face_mask_detection.data
 ```
+
 ## Paso 3 Listo ! Ejecutar Darknet y YOLOv3 !
-- Asegurate de estar dentro del directorio de darket  tener una camara web operativa, Si colocastes los archivos en la ubicacion correcta ejectuta el siguiente comando, la camara web comenzara a operar y el sistema detectara en tiempo real si una o varias personas estan usando mascarilla
+
+- Asegurate de estar dentro del directorio de darknet y tener una camara web operativa. Si colocaste los archivos en la ubicacion correcta,  ejecuta el siguiente comando, la camara web comenzara a operar y el sistema detectara en tiempo real si una o varias personas estan usando mascarilla
 ```
 ./darknet detector demo data/yolov3_face_mask_detection.data  cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights 
 ```
 
-- Si deseas aplicar la deteccion de mascarilla a una imagen ejecuta el siguiente comando
+- Si deseas aplicar la deteccion a una imagen ejecuta el siguiente comando:
 ```
 ./darknet detector test data/yolov3_face_mask_detection.data  cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights  <image_path>
 ```
-Por ejemplo tengo mi imagen image_test.jpg en la carpeta data, el comando seria:
+Por ejemplo, tengo mi imagen "image_test.jpg" en la carpeta data, el comando seria:
 ```
 ./darknet detector test data/yolov3_face_mask_detection.data  cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights  data/image_test.jpg 
 ```
 ![](https://github.com/dvalenciar/yolov3_face_mask_detection/blob/master/predictions.jpg)
 
-- Si deseas aplicar la deteccion de mascarilla a un video ejecuta el siguiente comando
+- Si deseas aplicar la deteccion a un video ejecuta el siguiente comando:
 ```
 ./darknet detector demo data/yolov3_face_mask_detection.data cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights <video_path.mp4> 
 ```
 
-- Si deseas aplicar la deteccion de mascarilla a un video y guardar el resultado con la deteccion, ejecuta el siguiente comando:
+- Si deseas aplicar la deteccion a un video y guardar el resultado con la deteccion, ejecuta el siguiente comando:
 
 ```
 ./darknet detector demo data/yolov3_face_mask_detection.data cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights -dont_show <video_path.mp4> -i 0 -out_filename out_face_mask_2.avi
