@@ -112,7 +112,7 @@ Por ejemplo tengo mi imagen image_test.jpg en la carpeta data, el comando seria:
 ```
 - Si deseas aplicar la deteccion de mascarilla a un video ejecuta el siguiente comando
 ```
-./darknet detector demo data/yolov3_face_mask_detection.data cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights -dont_show <video_path.mp4>.mp4 
+./darknet detector demo data/yolov3_face_mask_detection.data cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights -dont_show <video_path.mp4> 
 ```
 
 - Si deseas aplicar la deteccion de mascarilla a un video y guardar el video con la deteccion, ejecuta el siguiente comando:
