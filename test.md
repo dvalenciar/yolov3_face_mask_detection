@@ -22,19 +22,19 @@ Todo el trabajo duro fue ya realizado (no presento aqui la etapa de entrenamient
 sudo apt-get update 
 sudo apt-get upgrade
  ```
+## Paso 1: Clonar y compilar darket 
+Los siguientes comandos clonarán darknet del repositorio de AlexeyAB, ademas es necesario modificar el makefile para activar GPU y  OPENCV  
 
-Abrir una nueva terminal:
+```
 git clone https://github.com/AlexeyAB/darknet.git
-
-Modificar makefile para activar GPU y  OPENCV  
-
 cd darknet
 sed -i 's/OPENCV=0/OPENCV=1/' Makefile
 sed -i 's/GPU=0/GPU=1/' Makefile
 sed -i 's/CUDNN=0/CUDNN=1/' Makefile
-
-Compilar darknet
 make
+```
+ 
+
 
 Descagar el archivo cfg. disponible aqui
 El archivo yolov3.cfg contiene toda la información relacionada con a la arquitectura y parámetros de YOLOv3.
