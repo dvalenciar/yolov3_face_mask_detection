@@ -124,7 +124,7 @@ Por ejemplo tengo mi imagen image_test.jpg en la carpeta data, el comando seria:
 ```
 Encontras un video llamado face_mask_2.avi en el directorio principal ---> darknet/
 
-
+![](https://github.com/dvalenciar/yolov3_face_mask_detection/blob/master/video_out.gif)
 
 
 
