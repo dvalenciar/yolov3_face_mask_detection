@@ -1,13 +1,27 @@
-# Deteccion de mascarillas en tiempo real  usando YOLO V3 
+# Deteccion de uso de mascarilla en tiempo real usando YOLO V3 
+
+Las instrucciones que se presentan a continuacion son para ejecutar un algoritmo de deteccion si una o varias personas estan usando o no mascarilla. 
+
+Todo el trabajo duro fue ya realizado (no presento aqui la etapa de entrenamiento del sistema el cual me llevo varias semanas) aqui facilito todo los archivo necesarios y las instrucciones para correr el algoritmo de mandera muy facil, solo sigue las instrucciones y tendras un sistema de tiempo real para detecion de mascarillas
+
+>Solo como informacion general este sistema fue entranado con 2839 imagenes, las cuales fueron escogidas  y evaluadas manualmente. Ademas se utilizo labelImg para etiquetar manualamente una a una las imagenes.
+
 
 ## Pre-requisitos
+* Ubuntu 18.04.02 (bionic beaver)
 * Tarjeta NVIDIA GPU y su driver instalado correctamente
 * OpenCV >= 2.4
 * CUDA 10.1
 * cuDNN >= 7.0 for CUDA 10.1
 
-fue entranado con # tod ya fue entrando ahora para ti e mas facil solo tienes que seguir estos pasos 
-y ya 
+
+## Getting started
+- Siempre es una buena idea Update y Upgrade nuestro sistema
+
+ ```
+sudo apt-get update 
+sudo apt-get upgrade
+ ```
 
 Abrir una nueva terminal:
 git clone https://github.com/AlexeyAB/darknet.git
