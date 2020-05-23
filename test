@@ -1,4 +1,4 @@
-#Deteccion de mascarillas en tiempo real  usando YOLO V3 
+# Deteccion de mascarillas en tiempo real  usando YOLO V3 
 
 ## Pre-requisitos
 * Tarjeta NVIDIA GPU y su driver instalado correctamente
