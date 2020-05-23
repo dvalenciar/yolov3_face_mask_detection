@@ -1,5 +1,5 @@
 # Deteccion de uso de mascarilla en tiempo real usando YOLO V3 
-                ![](https://github.com/dvalenciar/yolov3_face_mask_detection/blob/master/video_out.gif)
+  ![](https://github.com/dvalenciar/yolov3_face_mask_detection/blob/master/video_out.gif)
 
 Las instrucciones que se presentan a continuacion son para ejecutar un algoritmo de deteccion si una o varias personas estan usando o no mascarilla. 
 
