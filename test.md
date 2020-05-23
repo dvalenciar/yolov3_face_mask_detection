@@ -22,7 +22,7 @@ sudo apt-get update
 sudo apt-get upgrade
  ```
 ## Paso 1: Clonar y compilar darket 
-Los siguientes comandos clonará darknet  del repositorio de AlexeyAB, ademas es necesario realizara los cambios necesario en el makefile para activar GPU y OPENCV  
+-Los siguientes comandos clonará darknet  del repositorio de AlexeyAB, ademas se realizarán los cambios necesario en el makefile para activar GPU y OPENCV  
 
 ```
 git clone https://github.com/AlexeyAB/darknet.git
@@ -32,11 +32,25 @@ sed -i 's/GPU=0/GPU=1/' Makefile
 sed -i 's/CUDNN=0/CUDNN=1/' Makefile
 make
 ```
- 
 
+## Paso 2: Descargar los archivos necesarios
+Asegurate de descargar y copiar esos archivos en los directorios correctos q se indican a continuacion:
+
+### Paso 2.1: Descargar los weights pre-entrenados
+
+> Este file contiene los parámetros de la red neuronal convolucional (CNN) de los weights pre-entrenados.
+- Descarga el archivo usando el link:
+```
+https://drive.google.com/open?id=1hMic2AgVUHc2NjMDaPUYQ1XkBkyz3Fcg
+```
+- Copia este archivo dento del directorio principal de darketet --> darknet/
+
+
+### Paso 2.2: Descargar el archivo de configuracion 
+> Este file .cfg contiene toda la información relacionada con a la arquitectura y parámetros de YOLOv3.
+- Descarga el archivo usando el link:
 
 Descagar el archivo cfg. disponible aqui
-El archivo yolov3.cfg contiene toda la información relacionada con a la arquitectura y parámetros de YOLOv3.
 Copia este archivo dento del directorio   --> darknet/cfg
 
 Descarga el archivo .data disponible aqui
