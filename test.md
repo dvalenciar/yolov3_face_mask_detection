@@ -103,7 +103,15 @@ Copia este archivo dento del directorio   --> darknet/data
 ./darknet detector demo data/yolov3_face_mask_detection.data  cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights 
 ```
 - Si colocastes los archivos en la ubicacion correcta, obtendras algo como esto, donde el sistema detectara en tiempo real si una o varias personas estan usando mascarilla:
+un gif
 
+para ejecutar en un video 
+el comando
+un gif
+
+para ejecutar en una imagen 
+el comando 
+la imagen
 
 
 
