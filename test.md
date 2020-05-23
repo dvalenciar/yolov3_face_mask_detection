@@ -97,22 +97,29 @@ Copia este archivo dento del directorio   --> darknet/data
             └───yolov3_face_mask_detection.data
 ```
 ## Paso 3 Listo ! Ejecutar Darknet y YOLOv3 !
-- Asegurate de estar dentro del directorio de darket  tener una camara web operativa y ejectuta la siguiente comando:
-
+- Asegurate de estar dentro del directorio de darket  tener una camara web operativa, Si colocastes los archivos en la ubicacion correcta ejectuta el siguiente comando, la camara web comenzara a operar y el sistema detectara en tiempo real si una o varias personas estan usando mascarilla
 ```
 ./darknet detector demo data/yolov3_face_mask_detection.data  cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights 
 ```
-- Si colocastes los archivos en la ubicacion correcta, obtendras algo como esto, donde el sistema detectara en tiempo real si una o varias personas estan usando mascarilla:
-un gif
 
-para ejecutar en un video 
-el comando
-un gif
+- Si deseas aplicar la deteccion de mascarilla a una imagen ejecuta el siguiente comando
+```
+./darknet detector test data/yolov3_face_mask_detection.data  cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights  <image_path>
+```
+Por ejemplo tengo mi imagen image_test.jpg en la carpeta data, el comando seria:
+```
+./darknet detector test data/yolov3_face_mask_detection.data  cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights  data/image_test.jpg 
+```
+- Si deseas aplicar la deteccion de mascarilla a un video ejecuta el siguiente comando
+```
+./darknet detector demo data/yolov3_face_mask_detection.data cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights -dont_show <video_path.mp4>.mp4 
+```
 
-para ejecutar en una imagen 
-el comando 
-la imagen
+- Si deseas aplicar la deteccion de mascarilla a un video y guardar el video con la deteccion de mascarilla, ejecuta el siguiente comando:
 
+```
+./darknet detector demo data/yolov3_face_mask_detection.data cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights -dont_show <video_path.mp4> -i 0 -out_filename out_face_mask_2.avi
+```
 
 
 
