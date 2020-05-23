@@ -42,7 +42,7 @@ Asegurate de descargar y copiar esos archivos en los directorios correctos q se 
 
 - Descarga el archivo **yolov3_face_mask_detection.weights** usando el link:
 ```
-https://drive.google.com/open?id=1hMic2AgVUHc2NjMDaPUYQ1XkBkyz3Fcg
+https://drive.google.com/open?id=17jOtOPXNgvYz0vPOpTmhZeQSB843NVIq
 ```
 - Copia este archivo dentro del directorio principal de darketet --> darknet/
 
@@ -54,7 +54,7 @@ https://drive.google.com/open?id=1hMic2AgVUHc2NjMDaPUYQ1XkBkyz3Fcg
 
 Descagar el archivo **yolov3_face_mask_detection.cfg** usando el link:
 ```
-https://drive.google.com/open?id=1hMic2AgVUHc2NjMDaPUYQ1XkBkyz3Fcg
+https://drive.google.com/open?id=1GNcC5pdh5HRqubKh4AELvJHyuwmf8Q6o
 ```
 Copia este archivo dentro del directorio --> darknet/cfg
 
@@ -72,7 +72,7 @@ Copia este archivo dento del directorio   --> darknet/data
 
 Descarga el archivo **yolov3_face_mask_detection.data** usando el link:
 ```
-https://drive.google.com/open?id=1hMic2AgVUHc2NjMDaPUYQ1XkBkyz3Fcg
+https://drive.google.com/open?id=1uimuJv8zMoYdlhPY80UsRM4sbheNMAGq
 ```
 Copia este archivo dento del directorio   --> darknet/data
 
