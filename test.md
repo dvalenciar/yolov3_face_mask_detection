@@ -6,24 +6,23 @@ Todo el trabajo duro fue ya realizado (no presento aqui la etapa de entrenamient
 
 >Solo como informacion general este sistema fue entranado con 2839 imagenes, las cuales fueron escogidas  y evaluadas manualmente. Ademas se utilizo labelImg para etiquetar manualamente una a una las imagenes.
 
-
 ## Pre-requisitos
+
 * Ubuntu 18.04.02 (bionic beaver)
 * Tarjeta NVIDIA GPU y su driver instalado correctamente
 * OpenCV >= 2.4
 * CUDA 10.1
 * cuDNN >= 7.0 for CUDA 10.1
-
+* Python >= 3.0
 
 ## Getting started
 - Siempre es una buena idea Update y Upgrade nuestro sistema
-
  ```
 sudo apt-get update 
 sudo apt-get upgrade
  ```
 ## Paso 1: Clonar y compilar darket 
-Los siguientes comandos clonarán darknet del repositorio de AlexeyAB, ademas es necesario modificar el makefile para activar GPU y  OPENCV  
+Los siguientes comandos clonará darknet  del repositorio de AlexeyAB, ademas es necesario realizara los cambios necesario en el makefile para activar GPU y OPENCV  
 
 ```
 git clone https://github.com/AlexeyAB/darknet.git
