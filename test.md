@@ -110,6 +110,8 @@ Por ejemplo tengo mi imagen image_test.jpg en la carpeta data, el comando seria:
 ```
 ./darknet detector test data/yolov3_face_mask_detection.data  cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights  data/image_test.jpg 
 ```
+![](https://github.com/dvalenciar/yolov3_face_mask_detection/blob/master/predictions.jpg)
+
 - Si deseas aplicar la deteccion de mascarilla a un video ejecuta el siguiente comando
 ```
 ./darknet detector demo data/yolov3_face_mask_detection.data cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights <video_path.mp4> 
