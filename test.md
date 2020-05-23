@@ -97,11 +97,13 @@ Copia este archivo dento del directorio   --> darknet/data
             └───yolov3_face_mask_detection.data
 ```
 ## Paso 3 Listo ! Ejecutar Darknet y YOLOv3 !
-Asegurate de estar dentro del directorio de darket y ejectuta la siguiente comando:
+- Asegurate de estar dentro del directorio de darket  tener una camara web operativa y ejectuta la siguiente comando:
 
 ```
 ./darknet detector demo data/yolov3_face_mask_detection.data  cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights 
 ```
+- Obtendras algo como esto, donde el sistema detectara en tiempo real si una o varias personas estan usando mascarilla
+
 
 
 
