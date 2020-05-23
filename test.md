@@ -1,4 +1,5 @@
 # Deteccion de uso de mascarilla en tiempo real usando YOLO V3 
+                ![](https://github.com/dvalenciar/yolov3_face_mask_detection/blob/master/video_out.gif)
 
 Las instrucciones que se presentan a continuacion son para ejecutar un algoritmo de deteccion si una o varias personas estan usando o no mascarilla. 
 
@@ -123,8 +124,6 @@ Por ejemplo tengo mi imagen image_test.jpg en la carpeta data, el comando seria:
 ./darknet detector demo data/yolov3_face_mask_detection.data cfg/yolov3_face_mask_detection.cfg yolov3_face_mask_detection.weights -dont_show <video_path.mp4> -i 0 -out_filename out_face_mask_2.avi
 ```
 Encontras un video llamado face_mask_2.avi en el directorio principal ---> darknet/
-
-![](https://github.com/dvalenciar/yolov3_face_mask_detection/blob/master/video_out.gif)
 
 
 
