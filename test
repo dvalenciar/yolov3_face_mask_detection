@@ -1,10 +1,10 @@
-# Deteccion de mascarillas en tiempo real  usando YOLO V3 
+#Deteccion de mascarillas en tiempo real  usando YOLO V3 
 
 ## Pre-requisitos
-Nvidia driver
-OpenCV >= 2.4
-CUDA 10.1
-cuDNN >= 7.0 for CUDA 10.1
+* Tarjeta NVIDIA GPU y su driver instalado correctamente
+* OpenCV >= 2.4
+* CUDA 10.1
+* cuDNN >= 7.0 for CUDA 10.1
 
 fue entranado con # tod ya fue entrando ahora para ti e mas facil solo tienes que seguir estos pasos 
 y ya 
