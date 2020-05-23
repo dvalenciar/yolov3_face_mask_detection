@@ -78,7 +78,7 @@ Copia este archivo dento del directorio   --> darknet/data
 
 
 - El siguiente diagrama puede ayudar a clarificar donde van estos archivos correctamente:
-
+```
     darknet
         │ 
         └── 3rdparty
@@ -95,7 +95,7 @@ Copia este archivo dento del directorio   --> darknet/data
             │
             └───yolov3_face_mask_detection.names
             └───yolov3_face_mask_detection.data
-
+```
 ## Paso 3 Listo ! Ejecutar Darknet y YOLOv3 !
 Asegurate de estar dentro del directorio de darket y ejectuta la siguiente comando:
 
